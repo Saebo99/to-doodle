@@ -1,6 +1,4 @@
-# =====================
 # OS / Editor
-# =====================
 .DS_Store
 .AppleDouble
 .LSOverride
@@ -28,32 +26,27 @@ tags
 .idea/
 *.iml
 
-# =====================
 # Env / Secrets
-# =====================
 .env
 .env.*
 !.env.example
 
-# =====================
 # Dart / Flutter (app/)
-# =====================
 # Dart tooling
 .dart_tool/
 .packages
-.pub-cache/
-pubspec.lock
 
 # Flutter build outputs
 build/
 **/build/
 
-app/android/
-app/ios/
-app/linux/
-app/macos/
-app/windows/
-app/web/
+app/**/Flutter/ephemeral/
+app/**/DerivedData/
+app/**/.symlinks/
+app/**/Pods/
+app/**/Podfile.lock
+app/android/.gradle/
+app/android/local.properties
 
 # Flutter plugin dependencies
 .flutter-plugins
