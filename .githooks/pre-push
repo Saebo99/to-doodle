@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+make test
+make go-test
+make go-lint

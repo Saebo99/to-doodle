@@ -1,0 +1,30 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile.dev
+      args:
+        USER_UID: ${UID:-1000}
+        USER_GID: ${GID:-1000}
+        FLUTTER_CHANNEL: stable
+        GO_VERSION: 1.25.5
+
+    working_dir: /workspace
+    init: true
+
+    environment:
+      PUB_CACHE: /home/dev/.pub-cache
+      GOPATH: /home/dev/go
+      GOMODCACHE: /home/dev/go/pkg/mod
+      GOCACHE: /home/dev/.cache/go-build
+
+    volumes:
+      - ./:/workspace:cached
+      - ${HOME}/.cache/to-doodle/pub-cache:/home/dev/.pub-cache
+      - ${HOME}/.cache/to-doodle/go-mod-cache:/home/dev/go/pkg/mod
+      - ${HOME}/.cache/to-doodle/go-build-cache:/home/dev/.cache/go-build
+    ports:
+      - "5000:5000"
+      - "8080:8080"
+    tty: true
+    stdin_open: true

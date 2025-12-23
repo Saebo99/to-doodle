@@ -1,0 +1,97 @@
+# =====================
+# OS / Editor
+# =====================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+
+# Neovim / Vim
+*~
+*.swp
+*.swo
+*.swn
+*.swm
+.netrwhist
+vim-tags
+tags
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# JetBrains
+.idea/
+*.iml
+
+# =====================
+# Env / Secrets
+# =====================
+.env
+.env.*
+!.env.example
+
+# =====================
+# Dart / Flutter (app/)
+# =====================
+# Dart tooling
+.dart_tool/
+.packages
+.pub-cache/
+pubspec.lock
+
+# Flutter build outputs
+build/
+**/build/
+
+app/android/
+app/ios/
+app/linux/
+app/macos/
+app/windows/
+app/web/
+
+# Flutter plugin dependencies
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Coverage
+coverage/
+
+# Isar / local DB artifacts (if any end up on disk)
+*.isar
+*.isar.lock
+*.sqlite
+*.db
+*.db-shm
+*.db-wal
+
+# Go (backend/)
+# Go build/test artifacts
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+bin/
+dist/
+
+# Go workspace (if used)
+go.work
+go.work.sum
+
+# Docker / Dev
+
+# Local docker override files
+docker-compose.override.yml
+compose.override.yml
+
+# Misc
+*.log
+tmp/
+
